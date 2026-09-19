@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Guys</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Handjet:wght,ELSH@100..900,2&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+</head>
+
+<body>
+    <nav class="nav-bar" aria-label="Main navigation">
+        <img src="imgs/logo.png" alt="Little Guys Logo" class="logo">
+        <div class="nav-buttons">
+            <a href="#home-page"><button class="nav-btn" type="button"><i class="fa-solid fa-house"></i>
+                    home</button></a>
+            <a href="#games-page"><button class="nav-btn" type="button"><i class="fa-solid fa-gamepad"></i>
+                    games</button></a>
+            <a href="#photos-page"><button class="nav-btn" type="button"><i class="fa-solid fa-images"></i>
+                    photos</button></a>
+            <a href="#info-page"><button class="nav-btn" type="button"><i class="fa-solid fa-circle-info"></i>
+                    info</button></a>
+        </div>
+    </nav>
+
+    <main class="page-wrapper">
+        <section class="page" id="home-page">
+            <h1 class="hero-title">
+                <span class="hero-kicker">welcome to</span>
+                <span class="channel_name"><a href="https://discord.gg/pYJMYanvp5">Little Guys</a></span>
+                <span class="hero-subtitle">Server</span>
+            </h1>
+
+            <div class="social-media" aria-label="Social media links">
+                <a href="https://discord.gg/pYJMYanvp5" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+                <a href="https://www.tiktok.com/@fexo07" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+
+            <div class="channels_btns">
+                <a href="https://discord.gg/pYJMYanvp5"><button type="button">Join server now</button></a>
+                <a href="https://www.tiktok.com/@fexo07"><button type="button">Follow on TikTok</button></a>
+            </div>
+        </section>
+
+        <section class="page" id="games-page">
+            <h1 class="pages_title">Games</h1>
+
+            <div class="games-cards">
+                <article class="card">
+                    <img src="imgs/roblox.svg" alt="Roblox">
+                    <div class="info">
+                        <h3>Roblox</h3>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="imgs/minecraft.svg" alt="Minecraft">
+                    <div class="info">
+                        <h3>Minecraft</h3>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="imgs/valorant.svg" alt="Valorant">
+                    <div class="info">
+                        <h3>valorant</h3>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="imgs/pubg.svg" alt="PUBG">
+                    <div class="info">
+                        <h3>pubg</h3>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="imgs/freefire.svg" alt="Free Fire">
+                    <div class="info">
+                        <h3>free fire</h3>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="imgs/call.svg" alt="Call of Duty">
+                    <div class="info">
+                        <h3>call of duty</h3>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="imgs/blood.svg" alt="Blood Strike">
+                    <div class="info">
+                        <h3>blood strike</h3>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="page" id="photos-page">
+            <h1 class="pages_title">Photos</h1>
+            <div class="photos-gallery">
+                <figure class="photo-card">
+                    <img src="imgs/photo1.png" alt="Photo 1">
+                </figure>
+                <figure class="photo-card">
+                    <img src="imgs/photo2.png" alt="Photo 2">
+                </figure>
+                <figure class="photo-card">
+                    <img src="imgs/photo3.png" alt="Photo 3">
+                </figure>
+                <figure class="photo-card">
+                    <img src="imgs/photo4.png" alt="Photo 4">
+                </figure>
+                <figure class="photo-card">
+                    <img src="imgs/photo5.png" alt="Photo 5">
+                </figure>
+            </div>
+        </section>
+
+        <section class="page" id="info-page">
+            <p class="info-p">سيرفرنا متميز عن كل السيرفرات <br> بنلعب كل الالعاب وكل يوم في فعلية <br> وبنتعامل
+                كاننا اخوات مش لسة شيفين بعض <br> وكل الاعمار موجودة وديما هتلاقي حد شبهك <br> مستني اية خش
+                <br><br><span class="channel_name"><a href="https://discord.gg/pYJMYanvp5">Little Guys</a></span>
+            </p>
+            <h1 class="names">اونر: @m_l13</h1>
+            <h1 class="names">اونر تاني: @user7070777</h1>
+            <h1 class="names">المطور: @mr.jo57</h1>
+        </section>
+    </main>
+
+    <div id="imagePopup" class="image-popup" onclick="closeImage()" aria-label="Image popup" role="dialog">
+        <img id="popupImg" src="" alt="Expanded gallery item">
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const images = document.querySelectorAll(".photos-gallery img");
+
+            images.forEach(function (img) {
+                img.addEventListener("click", function () {
+                    const popup = document.getElementById("imagePopup");
+                    const popupImg = document.getElementById("popupImg");
+
+                    popupImg.src = this.src;
+                    popup.style.display = "flex";
+                });
+            });
+        });
+
+        function closeImage() {
+            document.getElementById("imagePopup").style.display = "none";
+        }
+    </script>
+
+    <footer>
+        <div class="footer-inner">
+            <h2 class="footer-title">copyrights @<span>mr.jo57</span></h2>
+            <div class="footer-social">
+                <a href="https://discordapp.com/users/1516219787934564402" aria-label="Developer Discord"><i
+                        class="fa-brands fa-discord"></i></a>
+                <a href="https://www.tiktok.com/@mr.jo_7" aria-label="Developer TikTok"><i
+                        class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
